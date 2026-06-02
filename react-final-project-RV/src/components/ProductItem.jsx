@@ -34,17 +34,18 @@ const PrductItem = ({ product, deleteProduct }) => {
         }
     };
 
-    return(
-    <Card>
-      <div className={styles.container}>
-        <h3 className={styles.name}>{product.name}</h3>
-        <p className={styles.price}>{product.price} Ft</p>
-      </div>
-      {isLogged && <button onClick={() => handleDelete(product.id)}>Törlés</button>}
-      <NavLink to={`/details/${product.id}`}>
-        <button>Részletek</button>
-      </NavLink>
-    </Card>
+    return (
+        <Card>
+        <div className={styles.container}>
+            <img src={product.img_url} alt={product.name} className={styles.image} />
+            <h3 className={styles.name}>{product.name}</h3>
+            <p className={styles.price}>{product.price} Ft</p>
+        </div>
+        {isLogged && <button onClick={() => handleDelete(product.id)}>Törlés</button>}
+        <NavLink to={`/details/${product.id}`}>
+            <button>Részletek</button>
+        </NavLink>
+        </Card>
     );
 };
 
