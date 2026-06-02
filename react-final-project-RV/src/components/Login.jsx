@@ -23,7 +23,7 @@ const Login = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:5173/login', {
+            const response = await fetch('http://localhost:3000/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ const Login = () => {
     return (
         <div className={styles.container}>
             <h2>Bejelentkezés</h2>
-            <form onsubmit={handlesubmit} className={styles.form}>
+            <form onSubmit={handlesubmit} className={styles.form}>
                 <input type="text" placeholder="Felhasználónév" ref={usernameRef} className={styles.input} />
                 <input type="password" placeholder="Jelszó" ref={passwordRef} className={styles.input} />
                 <button type="submit" className={styles.button}>Belépés</button>
