@@ -10,6 +10,7 @@ const NavBar = () => {
             <NavLink to='/' className={({ isActive }) => isActive ? classes.active : classes.link}>Termékek</NavLink>
             {isLogged && <NavLink to="form" className={({ isActive }) => isActive ? classes.active : classes.link}>Hozzáadás</NavLink>}
             {!isLogged ? <NavLink to="login" className={({ isActive }) => isActive ? classes.active : classes.link}>Bejelentkezés</NavLink> : <a onClick={logout} className={classes.link}>Kijelentkezés</a>}
+            
         </nav>
     )
 }
