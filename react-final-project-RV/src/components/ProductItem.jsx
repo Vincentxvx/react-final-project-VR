@@ -4,7 +4,7 @@ import styles from "./ProductItem.module.css";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../context/loginContext";
 
-const PrductItem = ({ product, deleteProduct }) => {
+const ProductItem = ({ product, deleteProduct }) => {
     const { isLogged } = useAuth(); 
 
     const handleDelete = async (id) => {
@@ -49,4 +49,4 @@ const PrductItem = ({ product, deleteProduct }) => {
     );
 };
 
-export default PrductItem;
+export default ProductItem;
