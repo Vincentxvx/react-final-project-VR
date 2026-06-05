@@ -49,7 +49,7 @@ function App() {
               <ProductForm sendDataToApp={getProductData} />
             </ProtectedRoute>
           } />
-          <Route path='details/:id' element={<ProductDetails products={productData} />} />
+          <Route path='details/:id' element={<ProductDetails products={productData} deleteProduct={deleteProduct} />} />
         </Routes>
 
       </AuthProvider>
