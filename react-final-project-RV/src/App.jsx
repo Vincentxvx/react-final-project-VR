@@ -8,6 +8,7 @@ import { AuthProvider } from './context/loginContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Login from './components/Login';
 import { useEffect } from 'react';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   const [productData, setProductData] = useState([]);
@@ -48,7 +49,9 @@ function App() {
               <ProductForm sendDataToApp={getProductData} />
             </ProtectedRoute>
           } />
+          <Route path='details/:id' element={<ProductDetails products={productData} />} />
         </Routes>
+
       </AuthProvider>
     </>
   )
